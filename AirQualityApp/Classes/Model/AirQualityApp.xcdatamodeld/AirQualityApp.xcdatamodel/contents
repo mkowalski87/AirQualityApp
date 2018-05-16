@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName=".City" syncable="YES">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="QualityIndex" representedClassName=".QualityIndex" syncable="YES">
+        <attribute name="c6h6IndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="c6h6SourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="calcDate" attributeType="String" syncable="YES"/>
+        <attribute name="coIndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coSourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="indexLevelName" attributeType="String" syncable="YES"/>
+        <attribute name="no2IndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="no2SourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noIndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noSourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="o3IndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="o3SourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pm10IndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pm10SourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pm25IndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pm25SourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="so2IndexLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="so2SourceDataDate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="station" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Station" inverseName="qualityIndexes" inverseEntity="Station" syncable="YES"/>
+    </entity>
+    <entity name="Sensor" representedClassName=".Sensor" syncable="YES">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="paramCode" attributeType="String" syncable="YES"/>
+        <attribute name="paramFormula" attributeType="String" syncable="YES"/>
+        <attribute name="paramName" attributeType="String" syncable="YES"/>
+        <relationship name="station" maxCount="1" deletionRule="Nullify" destinationEntity="Station" inverseName="sensors" inverseEntity="Station" syncable="YES"/>
+        <relationship name="values" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SensorValue" inverseName="sensor" inverseEntity="SensorValue" syncable="YES"/>
+    </entity>
+    <entity name="SensorValue" representedClassName=".SensorValue" syncable="YES">
+        <attribute name="date" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sensor" maxCount="1" deletionRule="Nullify" destinationEntity="Sensor" inverseName="values" inverseEntity="Sensor" syncable="YES"/>
+    </entity>
+    <entity name="Station" representedClassName=".Station" syncable="YES">
+        <attribute name="coordLat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coordLon" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="favourite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stationName" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" maxCount="1" deletionRule="Nullify" destinationEntity="City" syncable="YES"/>
+        <relationship name="qualityIndexes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="QualityIndex" inverseName="station" inverseEntity="QualityIndex" syncable="YES"/>
+        <relationship name="sensors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sensor" inverseName="station" inverseEntity="Sensor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-63" positionY="9" width="128" height="75"/>
+        <element name="QualityIndex" positionX="-54" positionY="36" width="128" height="345"/>
+        <element name="Sensor" positionX="-54" positionY="135" width="128" height="135"/>
+        <element name="SensorValue" positionX="-54" positionY="135" width="128" height="90"/>
+        <element name="Station" positionX="-63" positionY="-18" width="128" height="180"/>
+    </elements>
+</model>

@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B42946F8206A7483005F6370 /* SensorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42946F7206A7483005F6370 /* SensorDAO.swift */; };
+		B42946FA206A7DAB005F6370 /* SensorDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42946F9206A7DAB005F6370 /* SensorDetailsInteractor.swift */; };
+		B42946FC206A8078005F6370 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42946FB206A8078005F6370 /* SensorData.swift */; };
+		B42946FE206B6FBD005F6370 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42946FD206B6FBC005F6370 /* RxDataSources.framework */; };
+		B4294700206B7057005F6370 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42946FF206B7057005F6370 /* Differentiator.framework */; };
+		B4294703206B9175005F6370 /* SensorValue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4294701206B9175005F6370 /* SensorValue+CoreDataClass.swift */; };
+		B4294704206B9175005F6370 /* SensorValue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4294702206B9175005F6370 /* SensorValue+CoreDataProperties.swift */; };
+		B4294706206B99D7005F6370 /* GetSensorValuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4294705206B99D7005F6370 /* GetSensorValuesResponse.swift */; };
+		B429526B205803A30040F62C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429526A205803A30040F62C /* NetworkClient.swift */; };
+		B429527120580C1A0040F62C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429527020580C1A0040F62C /* APIRequest.swift */; };
+		B429527320580C2A0040F62C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429527220580C2A0040F62C /* Endpoint.swift */; };
+		B4295275205812DF0040F62C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4295274205812DF0040F62C /* APIClient.swift */; };
+		B4295277205813F10040F62C /* GetStationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4295276205813F10040F62C /* GetStationsResponse.swift */; };
+		B438D72120528AFF00B86201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438D72020528AFF00B86201 /* AppDelegate.swift */; };
+		B438D72620528AFF00B86201 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B438D72420528AFF00B86201 /* Main.storyboard */; };
+		B438D72920528AFF00B86201 /* AirQualityApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B438D72720528AFF00B86201 /* AirQualityApp.xcdatamodeld */; };
+		B438D72B20528AFF00B86201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B438D72A20528AFF00B86201 /* Assets.xcassets */; };
+		B438D72E20528AFF00B86201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B438D72C20528AFF00B86201 /* LaunchScreen.storyboard */; };
+		B438D73920528AFF00B86201 /* AirQualityAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B438D73820528AFF00B86201 /* AirQualityAppTests.swift */; };
+		B43F5B6A20528E1D0082AD4C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F5B6820528E1D0082AD4C /* RxSwift.framework */; };
+		B43F5B6B20528E1D0082AD4C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F5B6920528E1D0082AD4C /* RxCocoa.framework */; };
+		B43F5B6E20528F150082AD4C /* SearchStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F5B6D20528F150082AD4C /* SearchStationViewController.swift */; };
+		B43F5B7020528F4A0082AD4C /* SearchStationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F5B6F20528F4A0082AD4C /* SearchStationPresenter.swift */; };
+		B43F5B7220528F890082AD4C /* SearchStationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F5B7120528F890082AD4C /* SearchStationInteractor.swift */; };
+		B43F5B7420528FAF0082AD4C /* SearchStationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F5B7320528FAF0082AD4C /* SearchStationRouter.swift */; };
+		B43F5B76205291D30082AD4C /* SearchStationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F5B75205291D30082AD4C /* SearchStationViewModel.swift */; };
+		B43F5B7B205299EA0082AD4C /* SearchStationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F5B7A205299EA0082AD4C /* SearchStationCell.swift */; };
+		B45BD1DC205677B10096E229 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD1DA205677B10096E229 /* City+CoreDataClass.swift */; };
+		B45BD1DD205677B10096E229 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD1DB205677B10096E229 /* City+CoreDataProperties.swift */; };
+		B45BD1E7205688360096E229 /* StationDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD1E6205688360096E229 /* StationDAO.swift */; };
+		B45BD1E920568B8A0096E229 /* StationDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD1E820568B8A0096E229 /* StationDAOTests.swift */; };
+		B45BD1EB20568D9D0096E229 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD1EA20568D9D0096E229 /* CoreDataHelper.swift */; };
+		B45C371B2068E2500026CFAB /* FavouriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C371A2068E2500026CFAB /* FavouriteListViewController.swift */; };
+		B45C371D2068E2720026CFAB /* FavouriteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C371C2068E2720026CFAB /* FavouriteListPresenter.swift */; };
+		B45C371F2068E3DE0026CFAB /* FavouriteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C371E2068E3DE0026CFAB /* FavouriteListRouter.swift */; };
+		B45C37212068EBDB0026CFAB /* FavouriteStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C37202068EBDB0026CFAB /* FavouriteStation.swift */; };
+		B45C37232068ED830026CFAB /* FavouriteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C37222068ED830026CFAB /* FavouriteListInteractor.swift */; };
+		B45C3725206901EA0026CFAB /* FavouriteStationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C3724206901EA0026CFAB /* FavouriteStationCell.swift */; };
+		B47BB7F920610F59002E9058 /* SimpleQualityIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BB7F820610F59002E9058 /* SimpleQualityIndexCell.swift */; };
+		B4B9DC7B20591EEF00D13F80 /* CityDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC7A20591EEF00D13F80 /* CityDAO.swift */; };
+		B4B9DC7F205A7A0E00D13F80 /* StationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC7E205A7A0E00D13F80 /* StationDetailsViewController.swift */; };
+		B4B9DC81205A7ABF00D13F80 /* StationDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC80205A7ABF00D13F80 /* StationDetailsPresenter.swift */; };
+		B4B9DC83205A7ACC00D13F80 /* StationDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC82205A7ACC00D13F80 /* StationDetailsInteractor.swift */; };
+		B4B9DC85205A7B4C00D13F80 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC84205A7B4C00D13F80 /* AppCoordinator.swift */; };
+		B4B9DC87205A891D00D13F80 /* StationDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC86205A891D00D13F80 /* StationDetailsRouter.swift */; };
+		B4B9DC89205A8DF700D13F80 /* StationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC88205A8DF700D13F80 /* StationDetailsViewModel.swift */; };
+		B4B9DC8B205AA15500D13F80 /* GetQualityIndexResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC8A205AA15500D13F80 /* GetQualityIndexResponse.swift */; };
+		B4B9DC94205AA52F00D13F80 /* QualityIndex+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC92205AA52F00D13F80 /* QualityIndex+CoreDataClass.swift */; };
+		B4B9DC95205AA52F00D13F80 /* QualityIndex+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC93205AA52F00D13F80 /* QualityIndex+CoreDataProperties.swift */; };
+		B4B9DC97205AA7A500D13F80 /* QualityIndexDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9DC96205AA7A500D13F80 /* QualityIndexDAO.swift */; };
+		B4BC685F206A6470000426C7 /* SensorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC685E206A6470000426C7 /* SensorDetailsViewController.swift */; };
+		B4BC6861206A6B03000426C7 /* SensorDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC6860206A6B03000426C7 /* SensorDetailsPresenter.swift */; };
+		B4BC6863206A6F5E000426C7 /* GetSensorsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC6862206A6F5E000426C7 /* GetSensorsResponse.swift */; };
+		B4BC6866206A7193000426C7 /* Sensor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC6864206A7193000426C7 /* Sensor+CoreDataClass.swift */; };
+		B4BC6867206A7193000426C7 /* Sensor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC6865206A7193000426C7 /* Sensor+CoreDataProperties.swift */; };
+		B4BC686A206A71D4000426C7 /* Station+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC6868206A71D4000426C7 /* Station+CoreDataClass.swift */; };
+		B4BC686B206A71D4000426C7 /* Station+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC6869206A71D4000426C7 /* Station+CoreDataProperties.swift */; };
+		B4E356EA2065086A0030F9A1 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E356E92065086A0030F9A1 /* SearchMapViewController.swift */; };
+		B4E356EC2065094D0030F9A1 /* SearchMapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E356EB2065094D0030F9A1 /* SearchMapPresenter.swift */; };
+		B4E356EE20650B7D0030F9A1 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E356ED20650B7D0030F9A1 /* MapAnnotation.swift */; };
+		B4E356F020650DBB0030F9A1 /* SearchMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E356EF20650DBB0030F9A1 /* SearchMapInteractor.swift */; };
+		B4E356F2206512010030F9A1 /* SearchMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E356F1206512010030F9A1 /* SearchMapRouter.swift */; };
+		B4E356F420651DDD0030F9A1 /* RxMKMapView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E356F320651DDD0030F9A1 /* RxMKMapView.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B438D73520528AFF00B86201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B438D71520528AFF00B86201 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B438D71C20528AFF00B86201;
+			remoteInfo = AirQualityApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B42946F7206A7483005F6370 /* SensorDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDAO.swift; sourceTree = "<group>"; };
+		B42946F9206A7DAB005F6370 /* SensorDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsInteractor.swift; sourceTree = "<group>"; };
+		B42946FB206A8078005F6370 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		B42946FD206B6FBC005F6370 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = SOURCE_ROOT; };
+		B42946FF206B7057005F6370 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = SOURCE_ROOT; };
+		B4294701206B9175005F6370 /* SensorValue+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorValue+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4294702206B9175005F6370 /* SensorValue+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SensorValue+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B4294705206B99D7005F6370 /* GetSensorValuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSensorValuesResponse.swift; sourceTree = "<group>"; };
+		B429526A205803A30040F62C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		B429527020580C1A0040F62C /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		B429527220580C2A0040F62C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B4295274205812DF0040F62C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B4295276205813F10040F62C /* GetStationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStationsResponse.swift; sourceTree = "<group>"; };
+		B438D71D20528AFF00B86201 /* AirQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B438D72020528AFF00B86201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B438D72520528AFF00B86201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B438D72820528AFF00B86201 /* AirQualityApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AirQualityApp.xcdatamodel; sourceTree = "<group>"; };
+		B438D72A20528AFF00B86201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B438D72D20528AFF00B86201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B438D72F20528AFF00B86201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B438D73420528AFF00B86201 /* AirQualityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B438D73820528AFF00B86201 /* AirQualityAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityAppTests.swift; sourceTree = "<group>"; };
+		B438D73A20528AFF00B86201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43F5B6820528E1D0082AD4C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		B43F5B6920528E1D0082AD4C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = SOURCE_ROOT; };
+		B43F5B6D20528F150082AD4C /* SearchStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationViewController.swift; sourceTree = "<group>"; };
+		B43F5B6F20528F4A0082AD4C /* SearchStationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationPresenter.swift; sourceTree = "<group>"; };
+		B43F5B7120528F890082AD4C /* SearchStationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationInteractor.swift; sourceTree = "<group>"; };
+		B43F5B7320528FAF0082AD4C /* SearchStationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationRouter.swift; sourceTree = "<group>"; };
+		B43F5B75205291D30082AD4C /* SearchStationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationViewModel.swift; sourceTree = "<group>"; };
+		B43F5B7A205299EA0082AD4C /* SearchStationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationCell.swift; sourceTree = "<group>"; };
+		B45BD1DA205677B10096E229 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B45BD1DB205677B10096E229 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B45BD1E6205688360096E229 /* StationDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDAO.swift; sourceTree = "<group>"; };
+		B45BD1E820568B8A0096E229 /* StationDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDAOTests.swift; sourceTree = "<group>"; };
+		B45BD1EA20568D9D0096E229 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		B45C371A2068E2500026CFAB /* FavouriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListViewController.swift; sourceTree = "<group>"; };
+		B45C371C2068E2720026CFAB /* FavouriteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListPresenter.swift; sourceTree = "<group>"; };
+		B45C371E2068E3DE0026CFAB /* FavouriteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListRouter.swift; sourceTree = "<group>"; };
+		B45C37202068EBDB0026CFAB /* FavouriteStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStation.swift; sourceTree = "<group>"; };
+		B45C37222068ED830026CFAB /* FavouriteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListInteractor.swift; sourceTree = "<group>"; };
+		B45C3724206901EA0026CFAB /* FavouriteStationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStationCell.swift; sourceTree = "<group>"; };
+		B47BB7F820610F59002E9058 /* SimpleQualityIndexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleQualityIndexCell.swift; sourceTree = "<group>"; };
+		B4B9DC7A20591EEF00D13F80 /* CityDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDAO.swift; sourceTree = "<group>"; };
+		B4B9DC7E205A7A0E00D13F80 /* StationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewController.swift; sourceTree = "<group>"; };
+		B4B9DC80205A7ABF00D13F80 /* StationDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsPresenter.swift; sourceTree = "<group>"; };
+		B4B9DC82205A7ACC00D13F80 /* StationDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsInteractor.swift; sourceTree = "<group>"; };
+		B4B9DC84205A7B4C00D13F80 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B4B9DC86205A891D00D13F80 /* StationDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsRouter.swift; sourceTree = "<group>"; };
+		B4B9DC88205A8DF700D13F80 /* StationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailsViewModel.swift; sourceTree = "<group>"; };
+		B4B9DC8A205AA15500D13F80 /* GetQualityIndexResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQualityIndexResponse.swift; sourceTree = "<group>"; };
+		B4B9DC92205AA52F00D13F80 /* QualityIndex+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QualityIndex+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4B9DC93205AA52F00D13F80 /* QualityIndex+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QualityIndex+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B4B9DC96205AA7A500D13F80 /* QualityIndexDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityIndexDAO.swift; sourceTree = "<group>"; };
+		B4BC685E206A6470000426C7 /* SensorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsViewController.swift; sourceTree = "<group>"; };
+		B4BC6860206A6B03000426C7 /* SensorDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDetailsPresenter.swift; sourceTree = "<group>"; };
+		B4BC6862206A6F5E000426C7 /* GetSensorsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSensorsResponse.swift; sourceTree = "<group>"; };
+		B4BC6864206A7193000426C7 /* Sensor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4BC6865206A7193000426C7 /* Sensor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B4BC6868206A71D4000426C7 /* Station+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B4BC6869206A71D4000426C7 /* Station+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B4E356E92065086A0030F9A1 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
+		B4E356EB2065094D0030F9A1 /* SearchMapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapPresenter.swift; sourceTree = "<group>"; };
+		B4E356ED20650B7D0030F9A1 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		B4E356EF20650DBB0030F9A1 /* SearchMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapInteractor.swift; sourceTree = "<group>"; };
+		B4E356F1206512010030F9A1 /* SearchMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapRouter.swift; sourceTree = "<group>"; };
+		B4E356F320651DDD0030F9A1 /* RxMKMapView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMKMapView.framework; path = Carthage/Build/iOS/RxMKMapView.framework; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B438D71A20528AFF00B86201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E356F420651DDD0030F9A1 /* RxMKMapView.framework in Frameworks */,
+				B4294700206B7057005F6370 /* Differentiator.framework in Frameworks */,
+				B43F5B6B20528E1D0082AD4C /* RxCocoa.framework in Frameworks */,
+				B43F5B6A20528E1D0082AD4C /* RxSwift.framework in Frameworks */,
+				B42946FE206B6FBD005F6370 /* RxDataSources.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B438D73120528AFF00B86201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B42952692058036D0040F62C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B429526A205803A30040F62C /* NetworkClient.swift */,
+				B4295276205813F10040F62C /* GetStationsResponse.swift */,
+				B4BC6862206A6F5E000426C7 /* GetSensorsResponse.swift */,
+				B4294705206B99D7005F6370 /* GetSensorValuesResponse.swift */,
+				B4B9DC8A205AA15500D13F80 /* GetQualityIndexResponse.swift */,
+				B429527020580C1A0040F62C /* APIRequest.swift */,
+				B429527220580C2A0040F62C /* Endpoint.swift */,
+				B4295274205812DF0040F62C /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B438D71420528AFF00B86201 = {
+			isa = PBXGroup;
+			children = (
+				B438D71F20528AFF00B86201 /* AirQualityApp */,
+				B438D73720528AFF00B86201 /* AirQualityAppTests */,
+				B438D71E20528AFF00B86201 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B438D71E20528AFF00B86201 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B438D71D20528AFF00B86201 /* AirQualityApp.app */,
+				B438D73420528AFF00B86201 /* AirQualityAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B438D71F20528AFF00B86201 /* AirQualityApp */ = {
+			isa = PBXGroup;
+			children = (
+				B438D74B20528DB700B86201 /* Frameworks */,
+				B438D72020528AFF00B86201 /* AppDelegate.swift */,
+				B438D74820528DAA00B86201 /* Classes */,
+				B438D72420528AFF00B86201 /* Main.storyboard */,
+				B438D72A20528AFF00B86201 /* Assets.xcassets */,
+				B438D72C20528AFF00B86201 /* LaunchScreen.storyboard */,
+				B438D72F20528AFF00B86201 /* Info.plist */,
+			);
+			path = AirQualityApp;
+			sourceTree = "<group>";
+		};
+		B438D73720528AFF00B86201 /* AirQualityAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B438D73820528AFF00B86201 /* AirQualityAppTests.swift */,
+				B45BD1E820568B8A0096E229 /* StationDAOTests.swift */,
+				B438D73A20528AFF00B86201 /* Info.plist */,
+			);
+			path = AirQualityAppTests;
+			sourceTree = "<group>";
+		};
+		B438D74820528DAA00B86201 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B43F5B79205299B20082AD4C /* Views */,
+				B438D74920528DAA00B86201 /* Scenes */,
+				B438D74A20528DAA00B86201 /* Model */,
+				B4B9DC84205A7B4C00D13F80 /* AppCoordinator.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B438D74920528DAA00B86201 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B4BC685D206A6449000426C7 /* SensorDetails */,
+				B45C37192068E22E0026CFAB /* FavouriteList */,
+				B4E356E82065079F0030F9A1 /* SearchMap */,
+				B4B9DC7D205A79F800D13F80 /* StationDetails */,
+				B43F5B6C20528EDF0082AD4C /* SearchStation */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B438D74A20528DAA00B86201 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4294701206B9175005F6370 /* SensorValue+CoreDataClass.swift */,
+				B4294702206B9175005F6370 /* SensorValue+CoreDataProperties.swift */,
+				B42952692058036D0040F62C /* Networking */,
+				B4B9DC92205AA52F00D13F80 /* QualityIndex+CoreDataClass.swift */,
+				B4B9DC93205AA52F00D13F80 /* QualityIndex+CoreDataProperties.swift */,
+				B45BD1EA20568D9D0096E229 /* CoreDataHelper.swift */,
+				B45BD1E6205688360096E229 /* StationDAO.swift */,
+				B42946F7206A7483005F6370 /* SensorDAO.swift */,
+				B4B9DC7A20591EEF00D13F80 /* CityDAO.swift */,
+				B4B9DC96205AA7A500D13F80 /* QualityIndexDAO.swift */,
+				B45BD1DA205677B10096E229 /* City+CoreDataClass.swift */,
+				B45BD1DB205677B10096E229 /* City+CoreDataProperties.swift */,
+				B4BC6868206A71D4000426C7 /* Station+CoreDataClass.swift */,
+				B4BC6869206A71D4000426C7 /* Station+CoreDataProperties.swift */,
+				B4BC6864206A7193000426C7 /* Sensor+CoreDataClass.swift */,
+				B4BC6865206A7193000426C7 /* Sensor+CoreDataProperties.swift */,
+				B438D72720528AFF00B86201 /* AirQualityApp.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B438D74B20528DB700B86201 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B42946FF206B7057005F6370 /* Differentiator.framework */,
+				B42946FD206B6FBC005F6370 /* RxDataSources.framework */,
+				B4E356F320651DDD0030F9A1 /* RxMKMapView.framework */,
+				B43F5B6920528E1D0082AD4C /* RxCocoa.framework */,
+				B43F5B6820528E1D0082AD4C /* RxSwift.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B43F5B6C20528EDF0082AD4C /* SearchStation */ = {
+			isa = PBXGroup;
+			children = (
+				B43F5B6D20528F150082AD4C /* SearchStationViewController.swift */,
+				B43F5B6F20528F4A0082AD4C /* SearchStationPresenter.swift */,
+				B43F5B7120528F890082AD4C /* SearchStationInteractor.swift */,
+				B43F5B7320528FAF0082AD4C /* SearchStationRouter.swift */,
+				B43F5B75205291D30082AD4C /* SearchStationViewModel.swift */,
+			);
+			path = SearchStation;
+			sourceTree = "<group>";
+		};
+		B43F5B79205299B20082AD4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B43F5B7A205299EA0082AD4C /* SearchStationCell.swift */,
+				B47BB7F820610F59002E9058 /* SimpleQualityIndexCell.swift */,
+				B45C3724206901EA0026CFAB /* FavouriteStationCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B45C37192068E22E0026CFAB /* FavouriteList */ = {
+			isa = PBXGroup;
+			children = (
+				B45C371A2068E2500026CFAB /* FavouriteListViewController.swift */,
+				B45C371C2068E2720026CFAB /* FavouriteListPresenter.swift */,
+				B45C371E2068E3DE0026CFAB /* FavouriteListRouter.swift */,
+				B45C37222068ED830026CFAB /* FavouriteListInteractor.swift */,
+				B45C37202068EBDB0026CFAB /* FavouriteStation.swift */,
+			);
+			path = FavouriteList;
+			sourceTree = "<group>";
+		};
+		B4B9DC7D205A79F800D13F80 /* StationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B4B9DC7E205A7A0E00D13F80 /* StationDetailsViewController.swift */,
+				B4B9DC80205A7ABF00D13F80 /* StationDetailsPresenter.swift */,
+				B4B9DC82205A7ACC00D13F80 /* StationDetailsInteractor.swift */,
+				B4B9DC86205A891D00D13F80 /* StationDetailsRouter.swift */,
+				B4B9DC88205A8DF700D13F80 /* StationDetailsViewModel.swift */,
+			);
+			path = StationDetails;
+			sourceTree = "<group>";
+		};
+		B4BC685D206A6449000426C7 /* SensorDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B4BC685E206A6470000426C7 /* SensorDetailsViewController.swift */,
+				B4BC6860206A6B03000426C7 /* SensorDetailsPresenter.swift */,
+				B42946F9206A7DAB005F6370 /* SensorDetailsInteractor.swift */,
+				B42946FB206A8078005F6370 /* SensorData.swift */,
+			);
+			path = SensorDetails;
+			sourceTree = "<group>";
+		};
+		B4E356E82065079F0030F9A1 /* SearchMap */ = {
+			isa = PBXGroup;
+			children = (
+				B4E356E92065086A0030F9A1 /* SearchMapViewController.swift */,
+				B4E356EB2065094D0030F9A1 /* SearchMapPresenter.swift */,
+				B4E356EF20650DBB0030F9A1 /* SearchMapInteractor.swift */,
+				B4E356ED20650B7D0030F9A1 /* MapAnnotation.swift */,
+				B4E356F1206512010030F9A1 /* SearchMapRouter.swift */,
+			);
+			path = SearchMap;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B438D71C20528AFF00B86201 /* AirQualityApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B438D73D20528AFF00B86201 /* Build configuration list for PBXNativeTarget "AirQualityApp" */;
+			buildPhases = (
+				B438D71920528AFF00B86201 /* Sources */,
+				B438D71A20528AFF00B86201 /* Frameworks */,
+				B438D71B20528AFF00B86201 /* Resources */,
+				B438D74720528BEB00B86201 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirQualityApp;
+			productName = AirQualityApp;
+			productReference = B438D71D20528AFF00B86201 /* AirQualityApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B438D73320528AFF00B86201 /* AirQualityAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B438D74020528AFF00B86201 /* Build configuration list for PBXNativeTarget "AirQualityAppTests" */;
+			buildPhases = (
+				B438D73020528AFF00B86201 /* Sources */,
+				B438D73120528AFF00B86201 /* Frameworks */,
+				B438D73220528AFF00B86201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B438D73620528AFF00B86201 /* PBXTargetDependency */,
+			);
+			name = AirQualityAppTests;
+			productName = AirQualityAppTests;
+			productReference = B438D73420528AFF00B86201 /* AirQualityAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B438D71520528AFF00B86201 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Michal Kowalski";
+				TargetAttributes = {
+					B438D71C20528AFF00B86201 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B438D73320528AFF00B86201 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B438D71C20528AFF00B86201;
+					};
+				};
+			};
+			buildConfigurationList = B438D71820528AFF00B86201 /* Build configuration list for PBXProject "AirQualityApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B438D71420528AFF00B86201;
+			productRefGroup = B438D71E20528AFF00B86201 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B438D71C20528AFF00B86201 /* AirQualityApp */,
+				B438D73320528AFF00B86201 /* AirQualityAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B438D71B20528AFF00B86201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B438D72E20528AFF00B86201 /* LaunchScreen.storyboard in Resources */,
+				B438D72B20528AFF00B86201 /* Assets.xcassets in Resources */,
+				B438D72620528AFF00B86201 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B438D73220528AFF00B86201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B438D74720528BEB00B86201 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMKMapView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxMKMapView.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B438D71920528AFF00B86201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42946FA206A7DAB005F6370 /* SensorDetailsInteractor.swift in Sources */,
+				B45BD1EB20568D9D0096E229 /* CoreDataHelper.swift in Sources */,
+				B47BB7F920610F59002E9058 /* SimpleQualityIndexCell.swift in Sources */,
+				B45BD1DC205677B10096E229 /* City+CoreDataClass.swift in Sources */,
+				B4BC6861206A6B03000426C7 /* SensorDetailsPresenter.swift in Sources */,
+				B438D72120528AFF00B86201 /* AppDelegate.swift in Sources */,
+				B4BC686B206A71D4000426C7 /* Station+CoreDataProperties.swift in Sources */,
+				B45BD1DD205677B10096E229 /* City+CoreDataProperties.swift in Sources */,
+				B4295277205813F10040F62C /* GetStationsResponse.swift in Sources */,
+				B4294704206B9175005F6370 /* SensorValue+CoreDataProperties.swift in Sources */,
+				B4B9DC95205AA52F00D13F80 /* QualityIndex+CoreDataProperties.swift in Sources */,
+				B4B9DC87205A891D00D13F80 /* StationDetailsRouter.swift in Sources */,
+				B45C3725206901EA0026CFAB /* FavouriteStationCell.swift in Sources */,
+				B4BC6867206A7193000426C7 /* Sensor+CoreDataProperties.swift in Sources */,
+				B4B9DC7B20591EEF00D13F80 /* CityDAO.swift in Sources */,
+				B438D72920528AFF00B86201 /* AirQualityApp.xcdatamodeld in Sources */,
+				B4B9DC94205AA52F00D13F80 /* QualityIndex+CoreDataClass.swift in Sources */,
+				B4E356EA2065086A0030F9A1 /* SearchMapViewController.swift in Sources */,
+				B4294706206B99D7005F6370 /* GetSensorValuesResponse.swift in Sources */,
+				B45C371D2068E2720026CFAB /* FavouriteListPresenter.swift in Sources */,
+				B43F5B76205291D30082AD4C /* SearchStationViewModel.swift in Sources */,
+				B4B9DC81205A7ABF00D13F80 /* StationDetailsPresenter.swift in Sources */,
+				B4E356F020650DBB0030F9A1 /* SearchMapInteractor.swift in Sources */,
+				B45C37232068ED830026CFAB /* FavouriteListInteractor.swift in Sources */,
+				B4BC6863206A6F5E000426C7 /* GetSensorsResponse.swift in Sources */,
+				B45C37212068EBDB0026CFAB /* FavouriteStation.swift in Sources */,
+				B4BC686A206A71D4000426C7 /* Station+CoreDataClass.swift in Sources */,
+				B42946F8206A7483005F6370 /* SensorDAO.swift in Sources */,
+				B4295275205812DF0040F62C /* APIClient.swift in Sources */,
+				B429526B205803A30040F62C /* NetworkClient.swift in Sources */,
+				B4BC6866206A7193000426C7 /* Sensor+CoreDataClass.swift in Sources */,
+				B42946FC206A8078005F6370 /* SensorData.swift in Sources */,
+				B43F5B7220528F890082AD4C /* SearchStationInteractor.swift in Sources */,
+				B4B9DC85205A7B4C00D13F80 /* AppCoordinator.swift in Sources */,
+				B429527320580C2A0040F62C /* Endpoint.swift in Sources */,
+				B4E356F2206512010030F9A1 /* SearchMapRouter.swift in Sources */,
+				B4294703206B9175005F6370 /* SensorValue+CoreDataClass.swift in Sources */,
+				B43F5B7B205299EA0082AD4C /* SearchStationCell.swift in Sources */,
+				B4B9DC8B205AA15500D13F80 /* GetQualityIndexResponse.swift in Sources */,
+				B43F5B7420528FAF0082AD4C /* SearchStationRouter.swift in Sources */,
+				B4E356EE20650B7D0030F9A1 /* MapAnnotation.swift in Sources */,
+				B43F5B6E20528F150082AD4C /* SearchStationViewController.swift in Sources */,
+				B4B9DC89205A8DF700D13F80 /* StationDetailsViewModel.swift in Sources */,
+				B4E356EC2065094D0030F9A1 /* SearchMapPresenter.swift in Sources */,
+				B4B9DC7F205A7A0E00D13F80 /* StationDetailsViewController.swift in Sources */,
+				B4BC685F206A6470000426C7 /* SensorDetailsViewController.swift in Sources */,
+				B429527120580C1A0040F62C /* APIRequest.swift in Sources */,
+				B43F5B7020528F4A0082AD4C /* SearchStationPresenter.swift in Sources */,
+				B45C371B2068E2500026CFAB /* FavouriteListViewController.swift in Sources */,
+				B45C371F2068E3DE0026CFAB /* FavouriteListRouter.swift in Sources */,
+				B4B9DC97205AA7A500D13F80 /* QualityIndexDAO.swift in Sources */,
+				B4B9DC83205A7ACC00D13F80 /* StationDetailsInteractor.swift in Sources */,
+				B45BD1E7205688360096E229 /* StationDAO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B438D73020528AFF00B86201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B438D73920528AFF00B86201 /* AirQualityAppTests.swift in Sources */,
+				B45BD1E920568B8A0096E229 /* StationDAOTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B438D73620528AFF00B86201 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B438D71C20528AFF00B86201 /* AirQualityApp */;
+			targetProxy = B438D73520528AFF00B86201 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B438D72420528AFF00B86201 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B438D72520528AFF00B86201 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B438D72C20528AFF00B86201 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B438D72D20528AFF00B86201 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B438D73B20528AFF00B86201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B438D73C20528AFF00B86201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B438D73E20528AFF00B86201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHSX8V3354;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AirQualityApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kowalski-apps.AirQualityApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B438D73F20528AFF00B86201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHSX8V3354;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = AirQualityApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kowalski-apps.AirQualityApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B438D74120528AFF00B86201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHSX8V3354;
+				INFOPLIST_FILE = AirQualityAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kowalski-apps.AirQualityAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQualityApp.app/AirQualityApp";
+			};
+			name = Debug;
+		};
+		B438D74220528AFF00B86201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHSX8V3354;
+				INFOPLIST_FILE = AirQualityAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kowalski-apps.AirQualityAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQualityApp.app/AirQualityApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B438D71820528AFF00B86201 /* Build configuration list for PBXProject "AirQualityApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B438D73B20528AFF00B86201 /* Debug */,
+				B438D73C20528AFF00B86201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B438D73D20528AFF00B86201 /* Build configuration list for PBXNativeTarget "AirQualityApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B438D73E20528AFF00B86201 /* Debug */,
+				B438D73F20528AFF00B86201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B438D74020528AFF00B86201 /* Build configuration list for PBXNativeTarget "AirQualityAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B438D74120528AFF00B86201 /* Debug */,
+				B438D74220528AFF00B86201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B438D72720528AFF00B86201 /* AirQualityApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B438D72820528AFF00B86201 /* AirQualityApp.xcdatamodel */,
+			);
+			currentVersion = B438D72820528AFF00B86201 /* AirQualityApp.xcdatamodel */;
+			path = AirQualityApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B438D71520528AFF00B86201 /* Project object */;
+}
